@@ -215,4 +215,14 @@ Php to use phpmyadmin a database interface.
 The following are step by step commands to install apache/nginx in a linux based
 system.
 
+#### Installing Apache
+
+```
+1. sudo apt-get update
+2. sudo apt-get install apache2
+```
+To check if the apache has be successfully installed, click on the following
+link to check [localhost](http://localhost). It should show up the default
+apache page.
+
 
