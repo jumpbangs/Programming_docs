@@ -1,6 +1,8 @@
 # Linux up skill Challenge
 
 1. Day 0 - Creating your own Server ( Digital Ocean plan)
+2. Day 1 - Accessing server and changing password
+3. Day 2 - Basic Navigation 
 
 ## Day 0
 
