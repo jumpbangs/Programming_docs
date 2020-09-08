@@ -23,7 +23,7 @@ To avoid logging in as root to the main account or accessing the main account vi
 ```
 1. adduser `username`
 2. usermod -a -G adm `username`
-3.	usermod -a -G sudo `username`
+3. usermod -a -G sudo `username`
 ```
 
 The following `adm` group allows the user to read log files, xconsole and sudo for access as root/admin user. Run the following command to fetch and install updates on the system which is `sudo apt update ` and `sudo apt upgrade`, the following command will fetch any updates and then apply those fetched updates.
