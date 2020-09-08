@@ -21,8 +21,8 @@ the password would be the one that you have created at the start of creating/set
 To avoid logging in as root to the main account or accessing the main account via ssh, it would be a good approach would be to create a user with root access. In which is done via the following steps:
 
 ```
-1.  adduser `username`
-2.	usermod -a -G adm `username`
+1. adduser `username`
+2. usermod -a -G adm `username`
 3.	usermod -a -G sudo `username`
 ```
 
@@ -47,10 +47,9 @@ To create a password-less ssh login follow the these steps to do so :
    If the following command gives an output of `No such file or directory` or `no matches found`, there is no existing ssh key files. If there is you can skip the following steps. 
 
 2.  To generate a new SSH key pair run the following command : 
-
-   `ssh-keygen -t rase -b 4096 -C 'your_email@domain.com'` 
-
-    Press `Enter`t o accept the default file location and file name. It will prompt you to type a secure pass-phrase for an extra layer of security but you can skip it as it optional.  Once that is done, your SSH keys would be generated and just run the following command to check if they are generated :
+   `ssh-keygen -t rase -b 4096 -C 'your_email@domain.com'`
+   
+   Press `Enter` to accept the default file location and file name. It will prompt you to type a secure pass-phrase for an extra layer of security but you can skip it as it optional.  Once that is done, your SSH keys would be generated and just run the following command to check if they are generated :
 
    `ls ~/.ssh/id_*`
 
