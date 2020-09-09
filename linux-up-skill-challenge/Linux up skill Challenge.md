@@ -84,3 +84,39 @@ Understanding how to `cd`( change directory or folder location ), using `ls` to 
 7. To create a new directory in the current directory just run `mkdir test`, this would create a directory called `test` in the current folder.
 8.  If you are unsure or what to know what command does or more features of the command just run the following command : `man ls` , `man pwd`, `man cp` these will show the full details and functionality of each commands ( this is a manual page for each commands).
 
+## Day 3
+
+###### Power Trip
+
+The command `sudo` is used to execute a command : `sudo apt update` with elevated privileges (usually as root). It can enable a non-root user to execute the same command with root privileges but he/she must be granted access to the `sudo` command.
+
+To add a non-root user to allow run `sudo`, you can run the following command :  `sudo adduser <username> sudo` in the terminal to grant him/her the access of running `sudo`. However if you would like to execute a several root commands in a non-root user account, you can run the following command: `sudo -i`  to access root privileges  .
+
+The following command : `sudo !!` re-runs the last/previous command as root.
+
+As stated in Day 3, the command `ls -l` will print out the permissions for file/folder. If the following file/folder has only root access, any of these command: `cat`,`less`, `nano` and `head` will not work unless they are paired with `sudo`. 
+
+The following file `/etc/shadow` holds the hashed passwords for the server in which is the prime target for intruders and the following file `/var/log/auth.log` holds the logs of what commands were executed by which users that were/are in the system. To filter out the logs you can use the `grep` command to do so, for example `grep "sudo"/var/log/auth.log` will filter out any logs that has the word `sudo` that is being used.
+
+###### Renaming server name and setting time
+
+To rename your server, edit both of the following files `/etc/hostname` & `/etc/hosts`  using the command line editor of your choice in my case I prefer using **vim**. Hence to edit the following file this would be my command : `sudo vim /etc/hostname` & `sudo vim /etc/hosts` which i replace the old name with the new name of my choice. To apply changes you will need to reboot you system in which you would have to run the following command : `sudo reboot`.
+
+To change timezone in your server run the following commands:
+
+1. To check your current time setting:
+
+   `timedatectl`
+
+2. Get the list of available timezones:
+
+   `timedatectl list-timezones`
+
+3. To set the timezone just run :
+
+   `sudo timedatectlset-timezone Asia/Kathmandu`
+
+4.  To confirm again:
+
+   `timedatectl`
+
