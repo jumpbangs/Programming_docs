@@ -3,6 +3,8 @@
 1. Day 0 - Creating your own Server ( Digital Ocean plan)
 2. Day 1 - Accessing server and changing password
 3. Day 2 - Basic Navigation 
+4. Day 3 - Power Trip
+5. Day 4 - Installing/removing Program  and usage of Midnight commander.
 
 ## Day 0
 
@@ -121,4 +123,29 @@ To change timezone in your server run the following commands:
    `timedatectl`
 
 ## Day 4
+
+###### Installing Software, exploring the file structure
+
+To search for applications in the `apt` repository just use the following command: `apt search "your_application"`; example `apt search "midnight commander"`. This would list out the range of packages that are available in the repository and you can install the desired application via the following command: `sudo apt install "your_application"`; example to install **midnight commander** just input `sudo apt install mc` this would install the following package/program.
+
+It would prompt you for the password and double confirm to install the following package/program. You can use the following command :`sudo apt install mc -y` this would let you skip the prompt if you want to install the program/package.
+
+###### Midnight Commander 
+
+**Midnight commander** is an terminal based file explorer, in would viewing files from the terminal more easily, furthermore you can use the mouse to select the files/options. To know more on how to use the following application just use the following command: `man mc`.
+
+***Basics commands for MC***
+
+1. Press `F3` to view the file and  again  to exit the file/folder.
+2. Press `F4`to edit your file using the given text editor by MC.
+3. Press `F5` to copy the file/folder to the desired folder destination (you're required to fill in the full directory path).
+4. Press `F6` to rename/move the file/folder to the desired name/directory.
+5. Press `F7 ` to create a folder.
+6. Press `F8` to delete folder/file.
+7. Press `F9` for more options.
+8. Press `F10` to quit MC.
+
+###### Removing/uninstalling  packages/program
+
+To remove programs/packages you can use the following command : `sudo apt remove "your_application"` or to completely remove the package/program plus it's dependences the following command: `sudo apt remove --purge "your_application"`. 
 
