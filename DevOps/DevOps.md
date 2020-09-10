@@ -18,19 +18,19 @@ Linux is an open source and community-developed Operating System(OS) for compute
 
 Linux directory is based on file system hierarchy standard, which is a standard that is used by Unix distribution developers, package developers and system implementations. These files can be accessed by using the forward slashes (/) to gain deeper access into other files. The following table lists out the descriptor of each file location.
 
-| Directory | Description                                                                                                      |
-|-----------|------------------------------------------------------------------------------------------------------------------|
-| /(root)   | The root file system is top-level directory that contains files that is required to boot Linux system            |
-| /bin      | The following directory contains user executable files                                                           |
-| /boot     | Contains static bootloader and kernel executable and configuration files                                         |
-| /dev      | Contains device files for every attached devices to the system.                                                  |
-| /etc      | Contains local system configuration for host computer                                                            |
-| /home     | Home directory storage for user, each user has their own subdirectory in /home                                   |
-| /media    | A place where external removable media are connected                                                             |
-| /opt      | Optional files where vendor supplied applications programs are located.                                          |
-| /tmp      | Temporary directory that used by the system and programs, users can also store files here temporary.             |
-| /use      | Contains shareable, read-only files, executable binaries and libraries.                                          |
-| /var      | Contains variable data files such as log files, MY SQL and other database, web server data files, email inboxes. |
+| Directory | Description                                                  |
+| --------- | ------------------------------------------------------------ |
+| /(root)   | The root file system is top-level directory that contains files that is required to boot Linux system |
+| /bin      | The following directory contains user executable files       |
+| /boot     | Contains static bootloader and kernel executable and configuration files |
+| /dev      | Contains device files for every attached devices to the system. |
+| /etc      | Contains local system configuration for host computer        |
+| /home     | Home directory storage for user, each user has their own subdirectory in /home |
+| /media    | A place where external removable media are connected         |
+| /opt      | Optional files where vendor supplied applications programs are located. |
+| /tmp      | Temporary directory that used by the system and programs, users can also store files here temporary. |
+| /use      | Contains shareable, read-only files, executable binaries and libraries. |
+| /var      | Contains variable data files such as log files, MY SQL and other database, web server data files, email in-boxes. |
 
 
 
@@ -50,7 +50,7 @@ The list shows Linux file commands that is use on a regular basis when using a L
  - head <file> : Displays the first five lines of the file
 
 ```
- 
+
 The following list shows how to move/copy files to the desired folder or directory.
 
 ```
@@ -61,11 +61,9 @@ The following list shows how to move/copy files to the desired folder or directo
    given directroy to the other directory
  - mv <dir/file> <dir/newFile> : Moves the file with the given file name to to given
    directory   
- ```
+```
 
-The following list shows how to change the file permission, that is commonly
-used.This [calculator](https://chmod-calculator.com/) helps you list out the
-custom file permission.
+The following list shows how to change the file permission, that is commonly used. This [calculator](https://chmod-calculator.com/) helps you list out the custom file permission.
 | Value | Meaning                                       |
 |-------|-----------------------------------------------|
 | 600   | Only the owner has read and write permission. |
@@ -93,11 +91,7 @@ both settings and numerical value.
 ```
 #### 1.2.2 Install/Remove of Pacakges
 
-The following are commands that is commonly used to install and remove packages
-that the user requires in the system. As the package manager varies from distros
-as Debain-based distro uses __APT__, RPM-based distro uses __YUM__ and
-Pacman-based distro uses __pacman__. However as most server are based on either
-Debain or RPM so the following examples are only in __APT__ and __YUM__.
+The following are commands that is commonly used to install and remove packages that the user requires in the system. As the package manager varies from distros as Debain-based distro uses __APT__, RPM-based distro uses __YUM__ and Pacman-based distro uses __pacman__. However as most server are based on either Debain or RPM so the following examples are only in __APT__ and __YUM__.
 
 #### APT commands
 
@@ -143,10 +137,7 @@ Debain or RPM so the following examples are only in __APT__ and __YUM__.
 ```
 
 #### 1.2.3 Finding and Killing a Process
-Sometimes a program/software will become unresponsive, which has to killed or
-terminated forcefully. This could be difficult if there is no graphical user
-interface however in linux it is possbile to terminate a process via command
-line. The following examples will show how to do so.
+Sometimes a program/software will become unresponsive, which has to killed or terminated forcefully. This could be difficult if there is no graphical user interface however in Linux it is possible to terminate a process via command line. The following examples will show how to do so.
 
 + To show all process that is running currently.
 ```
@@ -175,45 +166,36 @@ line. The following examples will show how to do so.
 
 #### 1.2.4 Creating/Adding Linux Users
 
-The following command will create/add a new user with a password prompt when
-creating the user. It will create a user home directory and other setttings
-which is a less hassle way to creating a new user. 
+The following command will create/add a new user with a password prompt when creating the user. It will create a user home directory and other settings which is a less hassle way to creating a new user. 
+
 ```
  - adduser <username>
 ```
 
-The following command does the same but it will only create the user, hence
-adding password to the user is done with another command given below.
+The following command does the same but it will only create the user, hence adding password to the user is done with another command given below.
 ```
  - useradd <username> : creates a new user
  - passwd <username> : sets password to the current user
 ```
 
-The following command creates a user and adds to a exisiting directory.
+The following command creates a user and adds to a existing directory.
 ```
  - useradd -d <dir> <username>
 ```
 
-The following command adds the user to a Group, this is useful as by adding a
-user to a group it grants the user permissions to read, write and execute files.
+The following command adds the user to a Group, this is useful as by adding a user to a group it grants the user permissions to read, write and execute files.
 ```
  - useradd -G <group name> <username>
 ```
- 
-### 1.3 Webserver
-As most webservers are using linux based distro, which are running apache or
-nginx the common web host servers. There different servers such as nodejs and
-flask but apache and nginx are the two most popluar webservers used to host
-websites or API backend server. 
 
-This section will show how to install and setup both apache and nginx
-servers. It will go over how to intall and setup MySql database and installing
-Php to use phpmyadmin a database interface.
+### 1.3 Webserver
+As most web-servers are using Linux based distro, which are running apache or nginx the common web host servers. There different servers such as nodejs and flask but apache and nginx are the two most popular web-servers used to host websites or API back-end server. 
+
+This section will show how to install and setup both apache and nginx servers. It will go over how to intall and setup MySql database and installing Php to use phpmyadmin a database interface.
 
 #### 1.3.1 Installing Apache/Nginx
 
-The following are step by step commands to install apache/nginx in a linux based
-system.
+The following are step by step commands to install apache/nginx in a linux based system.
 
 #### Installing Apache
 
@@ -221,8 +203,6 @@ system.
 1. sudo apt-get update
 2. sudo apt-get install apache2
 ```
-To check if the apache has be successfully installed, click on the following
-link to check [localhost](http://localhost). It should show up the default
-apache page.
+To check if the apache has be successfully installed, click on the following link to check [localhost](http://localhost). It should show up the default apache page.
 
 
