@@ -5,6 +5,7 @@
 3. Day 2 - Basic Navigation 
 4. Day 3 - Power Trip
 5. Day 4 - Installing/removing Program  and usage of Midnight commander.
+6. Day 5 - More or Less....
 
 ## Day 0
 
@@ -148,4 +149,24 @@ It would prompt you for the password and double confirm to install the following
 ###### Removing/uninstalling  packages/program
 
 To remove programs/packages you can use the following command : `sudo apt remove "your_application"` or to completely remove the package/program plus it's dependences the following command: `sudo apt remove --purge "your_application"`. 
+
+## Day 5
+
+###### More or less
+
+There are 2 commands to read a long file which is using `more` and `less`. Both of the following commands does the same action but the `less` function as more feature than the `more`function itself.
+
+By using `more`, user is able to go over the file one screen full at a time by using the **space-bar**  meanwhile `less`would enable the user to scroll through the file by using the :arrow_up:  and  :arrow_down: keys.
+
+Since the `less`command has more features,  you search for words by using the following command while running `less`,  `/` & `?` for a forward and back search respectively and press `n`and `N` for next match and previous match respectively. Press `v`to edit the current file with the configured editor.
+
+ ###### History
+
+To list out the whole command history that the system has cached just type `history`and it will display a list of command that has been run in the system when it is running. You can re-run the following command by lookup at the command line and enter `!<command_line_number>` to run the same command from the history.
+
+###### Dot-Files and tab completion
+
+When running the following command : `ls -la`, there would some file that would appear with `.bashrc`or `.vimrc`. These are dot-files that reside in the system, these dot-files usually have configurations or sensitive data that is mean to be hidden. Furthermore, while entering a command, you can auto complete or look up for suggestions by pressing the `Tab`button to execute the auto-complete function.
+
+ 
 
