@@ -170,3 +170,48 @@ When running the following command : `ls -la`, there would some file that would 
 
  
 
+## Day 6
+
+###### Editing with "VIM"
+
+There are many terminal text editors that is available in LINUX, but the most commonly install would be `vi`and `nano`terminal text editors in most linux distribution.
+
+There are different modes in `vim`the most commonly used is **insert** and **normal** mode, by default when you enter/use `vim`it is in normal mode. By pressing `i`, you will enter insert mode in which you would able edit files. There are more functionality in `vim` due to it's key-bindings and other plug-ins that is available.
+
+To check if `vim`is installed just run the command `vim`on the terminal, it an "editor" shows up, then the system as `vim`preinstalled, you can install it by using the following command: `sudo apt install vim`, this would install `vim`in the system.
+
+To get started just copy the services from the following directory `/etc`, into the current directory. Just run the following steps to copy the following file, 
+
+```bash
+cd
+cp -v /etc/services testfile
+vim testfile
+```
+
+this would copy the services to your local home directory named as **testfile** and be viewing the file in `vim`.
+
+###### Basic commands/movements
+
+- Press `Esc`twice would enable `vim`in normal mode, which you can run various different key-bindings or commands to manipulate the file.
+- To exit without saving changes you have to type `:q!`, this would exit `vim`without saving any changes to the following text file. However to save changes and exit the command would be `:wq`this would write and exit `vim`.
+- To move the cursor in vim there are 2 options you can use the arrow keys to move `up, down, left and right` but you can do so using `j,k,h,l`respectively in **normal mode** to navigate through the file.
+- To `copy`just press `yy`to 'yank' the following line. 
+- To `paste`just press `p` to paste.
+- To `cut & paste`just pres `dd` to cut the following line and then `p`to paste it.
+- To `delete` a line is the same as `dd` or to delete a multiple of lines just press `<number_of_lines>dd`, example `3dd` would delete 3 lines that is from the cursor.
+- To undo any changes just pres `u` to undo any mistakes or error.
+- To navigate to the last line of the file just press `gg` and to navigate to the first line of the file just press `G`or `Shift+g`.
+- To search for a word or references just type `/<word_that_you_are_searching>` and then press `n` to find the next occurrence  in line.
+- To set number lines just type: `:set number` and press enter to apply the changes, to move to the number line of choice just type:`:<number_line>` and the cursor will be at that number line.
+
+
+
+## Day 7
+
+###### Installing Apache
+
+The following is application is to have a better understanding of application installation, configuration files, services and logs.
+
+To install apache run the following command: `sudo apt install apache2` but before that you should run `sudo apt update`as this following command will fetch the latest updates and would install the latest versions of the application.
+
+To check if apache2 is running, just open up a web browser and type in the ip address of your server. If you're unsure, just run the command: `ifconfig`it will show which ip that your machine is running on. 
